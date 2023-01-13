@@ -1,0 +1,21 @@
+{
+  "background_color": "#ffffff",
+  "description": "Game",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "3d",
+  "orientation": "any",
+  "scope": "https://kashumy.github.io/3d/Index.html",
+  "short_name": "Threedee",
+  "start_url": "https://kashumy.github.io/3d/Index.html",
+  "theme_color": "#ffffff",
+  "categories": [],
+  "screenshots": [],
+  "icons": [],
+  "shortcuts": [],
+  "lang": "en",
+  "display_override": [
+    "fullscreen",
+    "window-controls-overlay"
+  ]
+}
