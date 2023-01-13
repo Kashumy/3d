@@ -1,9 +1,14 @@
 {
   "background_color": "#ffffff",
-  "description": "Game",
+  "description": "polska gra 5 miesięcy pracy samemu",
   "dir": "ltr",
   "display": "standalone",
-  "name": "3d",
+  "name": "3DExplore",
+"start_url": "/",
+"categories": [
+        "games",
+        
+    ],
   "orientation": "any",
   "scope": "https://kashumy.github.io/3d/Index.html",
   "short_name": "Threedee",
@@ -18,4 +23,9 @@
     "fullscreen",
     "window-controls-overlay"
   ]
+"url_handlers": [
+        {
+            "origin": "https://kashumy.github.io/3d/Index.html"
+        }
+    ]
 }
