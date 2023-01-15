@@ -7,14 +7,16 @@ Za pomoca consout tu link
 ----
 ----
 *[♦️😉gra rozwija się caly czas!!! ] 
+\. Nie które błędy sa do naprawienia
+
 💾 Copyright (nie modyfikuj i nie rub kopi z gry
 Możesz zagrać w gre i nie gdy nagrywasz nie musisz
-Podawac twórców :) muzyka nie ma praw autorskich 
-Jest zrobiona prze ze mnie ale proszę nie uzywać 
-Jej w celu zarobienia pieniedzy ;) ) 
-🙂❤️Apk będzie darmowy
-Co bedzie w następnej aktualizacji - 
-☕ Bedzie wiecej muzyk
-🎁 Wieksza mapa
-🤔 I moze kolizje z blokami
-🙃 I moze edytor mapy 
+Podawac twórców :) 
+ 
+## To_Do - moje zrub to - 
+- lepsze sterowanie
+- zrub pwa
+- fullscrean
+- daj linka do pobrania pwa w muj page project
+### Co_Nowego - whats new - 
+`nowe sterowanie lepsze👤👍
