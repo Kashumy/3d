@@ -6,6 +6,7 @@
 Za pomoca consout tu link
 ----
 ----
+*[♦️😉gra rozwija się caly czas!!! ] 
 💾 Copyright (nie modyfikuj i nie rub kopi z gry
 Możesz zagrać w gre i nie gdy nagrywasz nie musisz
 Podawac twórców :) muzyka nie ma praw autorskich 
