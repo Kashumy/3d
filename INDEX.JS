@@ -1,17 +1,11 @@
 
-      /*
-      
-      add new color and more realistic floor
-      add more lands and add a most (nie wiem nie jestem fobry w angielski)
-      add new light shadow
-      learn more GLSL for unity shaders
      
       
-      */
+      
       ab=1;
       
       
-      lightintensity =(  4.9 ) ;
+      lightintensity =(  5  ) ;
       
 
       
@@ -118,7 +112,7 @@ var snu = new THREE.MeshNormalMaterial({
       
  //objekty
  var brg = new THREE.BoxGeometry(160,3,10);
-            var an = new THREE.BoxGeometry(2000,100,2000);
+            var an = new THREE.BoxGeometry(3000,100,3000);
       var floor = new THREE.BoxGeometry(100,10,100);
       var m1 = new THREE.BoxGeometry(100,50,100);
       var floormap2 = new THREE.BoxGeometry(100,10,100);
@@ -130,7 +124,8 @@ var snu = new THREE.MeshNormalMaterial({
      var ub = new THREE.BoxGeometry(5,12,5);
      var o2obj = new THREE.SphereGeometry(500,500,500);
           //
-          var ocean = new THREE.Mesh(an, gold);
+         
+ var ocean = new THREE.Mesh(an, gold);
           
 var most = new THREE.Mesh(brg, treelogmaterial);  
           var cube2 = new THREE.Mesh(ub, material2);
@@ -141,8 +136,8 @@ var most = new THREE.Mesh(brg, treelogmaterial);
 			var tree = new THREE.Mesh(treelog, treelogmaterial);
 						var tree3 = new THREE.Mesh(treelog, treelogmaterial);
 		var leaf = new THREE.Mesh(leaves, leavematerial ) ;
-									var tree2 = new THREE.Mesh(treelog, treelogmaterial);
-									var tree4 = new THREE.Mesh(treelog, treelogmaterial);
+			var tree2 = new THREE.Mesh(treelog, treelogmaterial);
+			var tree4 = new THREE.Mesh(treelog, treelogmaterial);
 	var leaf2 = new THREE.Mesh(leaves, leavematerial ) ;
 	var leaf3 = new THREE.Mesh(leaves, leavematerial ) ;
 	var leaf4 = new THREE.Mesh(leaves, leavematerial ) ;
@@ -249,19 +244,19 @@ cube2.position.x -= 50
 		background.rotation.y += 0.0008;
 
 						if (xt > 800) {
-			  camera.rotation.y -= xt / 30000;
+			  camera.rotation.y -= xt / 60000;
 			}
 if (xt < 1000) {
-  camera.rotation.y += xt / 30000;
+  camera.rotation.y += xt / 60000;
 }
 
 
 
 			if (yt < 220) {
-			  camera.rotation.x += yt / 10000;
+			  camera.rotation.x += yt / 40000;
 			}
 if (yt > 320) {
-  camera.rotation.x -= yt / 25000;
+  camera.rotation.x -= yt / 45000;
 }
 			
 			
