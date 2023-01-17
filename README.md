@@ -1,9 +1,11 @@
 # 3d - project finaly - 
--naprawiono błędy 
--przyciski niechcialy sie pokazac przez dziwny blad w javascrip2 index i css
+## 3d - to version 1.7🛠️-
+-💬naprawiono błędy 
+-📕przyciski niechcialy sie pokazac przez dziwny blad w javascrip2 index i css
 💞️ wielkie starania włożyłem w ta gre 
 💎 Bedzie mozna pobrać apk
 Za pomoca consout tu link
+2# - dodano fps meter 
 ----
 ----
 *[♦️😉gra rozwija się caly czas!!! ] 
@@ -14,9 +16,13 @@ Możesz zagrać w gre i nie gdy nagrywasz nie musisz
 Podawac twórców :) 
  
 ## To_Do - moje zrub to - 
-- lepsze sterowanie
-- zrub pwa
-- fullscrean
-- daj linka do pobrania pwa w muj page project
+-📄 lepsze sterowanie
+- 📄zrub pwa
+-📄 fullscrean
+-📄 daj linka do pobrania pwa w muj page project
 ### Co_Nowego - whats new - 
-`nowe sterowanie lepsze👤👍
+📦`nowe sterowanie lepsze👤👍
+📦`fps licznik`
+📦
+📦
+📦
