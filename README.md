@@ -21,8 +21,9 @@ Podawac twórców :)
 -📄 fullscrean
 -📄 daj linka do pobrania pwa w muj page project
 ### Co_Nowego - whats new - 
-📦`nowe sterowanie lepsze👤👍
+📦`nowe sterowanie lepsze👤👍`
 📦`fps licznik`
+📦`nowy pakiet będzie przewidawany? za do20dni`
 📦
 📦
-📦
+Polska trudna jezyk 🦶
