@@ -90,5 +90,22 @@ if(xk===1 && gttsv ===290) {
   camera.position.y += 20;
 }
 
+
+var fps = document.getElementById("fps");
+var startTime = Date.now();
+var frame = 0;
+
+function tick() {
+  var time = Date.now();
+  frame++;
+  if (time - startTime > 1000) {
+      fps.innerHTML = (frame / ((time - startTime) / 1000)).toFixed(1);
+      startTime = time;
+      frame = 0;
+	}
+  window.requestAnimationFrame(tick);
+}
+tick();
+
  
  
