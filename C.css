@@ -45,6 +45,7 @@ p{
   height:100px;
   margin :10px;
   z-index: 3;
+  visibility:visible;
 }
 .przycisk2 {
   outline: none;
@@ -53,12 +54,14 @@ p{
   height: 50px;
   margin: 10px;
   color:#CDCDCD;
+  visibility:visible;
 }
 .p{
   position :absolute ;
   top:220px;
   left: 150px;
   color:#323232;
+visibility:visible;
 }
 .d{
   position :absolute;
