@@ -1,67 +1,260 @@
 
-
-
 <!DOCTYPE Html >
 <html>
-  <head>
-  		<meta charset="UTF-8">
-  	<meta name="viewport" content="target-densitydpi=device-dpi, initial-scale=0.5, user-scalable=1" />
-  	...
-  		<canvas onload="text2();" onclick="myFunction2(event) "  ontouchmove="myFunction(event);" id="canvas"   class="a ssd "  ></canvas>
-  			<canvas id="m" class="menu"></canvas>
-  			<canvas class="cnvs" id="c"></canvas>
-  			<canvas class="cross" />
-  		<title>💾 obruć urządzenie</title>
+  <head  >
+  <meta charset="UTF-8">
+  <meta name="viewport" content="target-densitydpi=device-dpi, initial-scale=0.5, user-scalable=0" />
+  ...
 
-   <a>https://github.com/Kashumy</a>
-  </head>
-  <p id="console"></p>
-  <body scroll="no" style="overflow: hidden">
-  <body>
- <-> przyciski </->
-    <button onload="text2"  class="przycisk p"  ontouchmove="go(event)"      onclick="go(event)"    >P</button>
-    <div id="fps"  >fps</div>
-    <button   class="przycisk d" ontouchmove="back(event)"      onclick="back(event)"  >D</button>
-   <div id="log"
-   >
-     <div>log is empty<span id="log2"></span></div>
-   </div>
-    <div id="debug">
-      <div>x:<span id="x"></span></div>
-      <div>y:<span id="y"></span></div>
-      <div>z:<span id="z"></span></div>
-    </div>
-    
-        <button   class="przycisk C"  ontouchmove="right(event)"     >C</button>
-    
-        <button   class="przycisk E" ontouchmove="left(event)"    >E</button>
-    <button class="przycisk  S" ontouchmove="up(event)"  >Up</button>
-        <button class="przycisk  F" ontouchmove="down(event)"  >down</button>
-           <button class="przycisk  O2" id="m2" onclick="menu();"  >Settings on </button>
-            <button class="przycisk O " id="m3"  onclick="menu2();"  >Settings off</button>
+    <canvas onload="text2();" onclick="myFunction2(event) "  ontouchmove="myFunction(event);" id="canvas"   class="a ssd "  ></canvas>
+  <canvas id="m" class="menu"></canvas>
+  <canvas class="cnvs" id="c"></canvas>
+  <canvas class="cross" />
+  <title>💾 obruć urządzenie</title>
+
+    <style>
+        canvas { width: 1324px; height: 512px; }
+        body{
+          
+        background : black ;
+        
+} 
+
+.ssd{
+  position :absolute ;
+  width: 1200px;
+  height: -512px;
+  
+}
+p{
+  position :absolute ;
+  color :#36FF2C;
+  font-size :20px;
+}
+.przycisk{
+  outline: none;
+  background :#A6A6A6A3;
+  width: 100px;
+  height:100px;
+  margin :10px;
+}
+.przycisk2 {
+  outline: none;
+  background: #565656C9;
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  color:#CDCDCD;
+}
+.p{
+  position :absolute ;
+  top:220px;
+  left: 150px
+}
+.d{
+  position :absolute;
+  top:330px;
+  left: 150px
+}
+.C{
+  position :absolute;
+  top:330px;
+  left: 40px
+}
+.E{
+position :absolute;
+  top:330px;
+  left: 260px
+}
+.S {
+  position: absolute;
+  top: 330px;
+  left: 1460px
+}
+.F {
+  position: absolute;
+  top: 220px;
+  left: 1460px
+} 
+:root {
+  touch-action: pan-x pan-y;
+  height: 100%
+}
+body {
+  touch-action: manipulation;
+}
+.a {
+  
+  -webkit-filter: url(#a);
+  transition-duration: 4s ;
+  position :absolute ;
+  left:20px;
+} 
+.menu{
+  position :absolute ;
+  background-color :#444444C9;
+  width :1000px;
+  height :400px;
+  left :400px;
+  top:200px;
+}
+.b{
+  color :red;
+  font-size :20px;
+  
+  
+}
+.O{
+  position :absolute ;
+  left:1000px;
+}
+.optlight{
+  position :absolute ;
+  top:300px ;
+  width :400px;
+  left: 500px;
+}
+.kkryst {
+  position: absolute;
+  top: 350px;
+  left: 500px;
+}
+.day{
+  position :absolute ;
+  top: 400px;
+  left: 490px;
+}
+//new status
+
+.kom {
+  position: absolute;
+  top: 450px;
+  left: 490px;
+  z-index: 3;
+}
+.cnvs{
+  position :absolute ;
+  display :block ;
+  width :99%;
+  height :99%;
+  z-index: 0;
+  background :black ;
+  
+}
+html,body{
+  margin: 0; height: 100%; overflow:;
+  
+}
+#fps{
+  position :absolute ;
+  top :10px;
+  z-index :12;
+  color :#FFFFFF;
+  padding:20px;
+  background: #BCBCBC;
+  color: #001F38;
+  width: 60px;
+  left: 1400px;
+  height: 10px;
+  margin: auto;
+  border-radius: 4px;
+}
+/*
+#EFFF00
+rgba(21, 29, 34, 1)
+#0F1E27
+#00010BBF
+  blue #0015FFBF 
+grass #007707BF
+wood #4F3100
+#234700
+*/
+#debug {
+  position: absolute;
+  z-index: 12;
+  width :200px;
+  left: 1em;
+  top: 1em;
+  left :1200px;
+  top: 500px;
+  padding: 1em;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-family: monospace;
+}
+#console{
+  visibility:hidden ;
+}
+#log {
+  position: absolute;
+  z-index: 12;
+  width: 200px;
+  left: 1em;
+  top: 1em;
+  left: 1200px;
+  top: 600px;
+  padding: 1em;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-family: monospace;
+} 
+//end of new css status
+
+html, body {margin: 0; height: 100%; overflow:} 
+    </style>
+  </head>
+  <p id="console"  ></p>
+    <p id="console2" class="b" onload="ssd() " ></p>
+  <body scroll="no" style="overflow: hidden">
+  <body>
+    <button onload="text2"  class="przycisk p"  ontouchmove="go(event)"      onclick="go(event)"    >P</button>
+        <div id="fps"  >fps</div>
+   <div id="log"
+   >
+     <div>log is empty<span id="log2"></span></div>
+   </div>
+    <div id="debug">
+      <div>x:<span id="x"></span></div>
+      <div>y:<span id="y"></span></div>
+      <div>z:<span id="z"></span></div>
+    </div>
+
+    <button   class="przycisk d" ontouchmove="back(event)"      onclick="back(event)"  >D</button>
+    
+    
+        <button   class="przycisk C"    ontouchmove="right(event)"     >C</button>
+    
+        <button   class="przycisk E" ontouchmove="left(event)"    >E</button>
+    <button class="przycisk  S" ontouchmove="up(event)"  >Up</button>
+        <button class="przycisk  F" ontouchmove="down(event)"  >down</button>
+           <button class="przycisk  O" id="m2" onclick="menu()"  >Settings on </button>
+            <button class="przycisk O " id="m3"  onclick="menu2()"  >Settings off</button>
 
 <input type="range" id="m4" class="optlight" name="points" min="1" max="8">
-        
+        
 <label for="color">color</label>
 <input type="color" value="#122118" id="color" class="kkryst" />
-        <button class="day przycisk2" id="daynight" onclick="night()" >Time</button>
-    <button class="kom przycisk2" id="hu1" onclick="hidedb()" >debug test mode</button>
-        
-        
-        
-        
+        <button class="day przycisk2" id="daynight" onclick="night()" >Time</button>
+    <button class="kom przycisk2" id="hu1" onclick="hidedb()" >debug test mode</button>
+        
+        
 
-    
-    
-    
-    <div   id="container"></div>
-<script type="text/javascript" src="./three.js"></script>
-<script src="/scr/Fps.js"></script>
+
+
+    
+    
+    <div id="container"></div>
+<script type="text/javascript" src="three.js"></script>
+<script src=". /Fps.js"></script>
 <script type="application/json" src="http://manifest.json"></script>
-<link rel="stylesheet" href="./C.css">
+
+
+
 <script src="./Index2.js"></script>
 <script src="./Index3.js"></script>
 <script src="./INDEX.JS"></script>
 <script src="./Full.js"></script>
-  </body>
+  </body> 
+  </body>
 </html>
+
