@@ -106,6 +106,6 @@ function tick() {
   window.requestAnimationFrame(tick);
 }
 tick();
-
+renderer();
  
  
