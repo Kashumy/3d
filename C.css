@@ -45,6 +45,7 @@ p{
   height:100px;
   margin :10px;
   z-index: 3;
+visibility :visible ;
 }
 .przycisk2 {
   outline: none;
@@ -53,12 +54,14 @@ p{
   height: 50px;
   margin: 10px;
   color:#CDCDCD;
+visibility :visible ;
 }
 .p{
   position :absolute ;
   top:220px;
   left: 150px;
   color:#323232;
+visibility :visible ;
 }
 .d{
   position :absolute;
@@ -107,6 +110,7 @@ body {
   left :400px;
   top:200px;
   z-index :2;
+
 }
 .b{
   color :red;
@@ -177,6 +181,7 @@ html,body{
   height: 10px;
   margin: auto;
   border-radius: 4px;
+visibility :visible ;
 }
 /*
 #EFFF00
@@ -200,6 +205,7 @@ wood #4F3100
   background: rgba(0, 0, 0, 0.8);
   color: white;
   font-family: monospace;
+visibility :visible ;
 }
 #console{
   visibility:hidden ;
@@ -216,4 +222,5 @@ wood #4F3100
   background: rgba(0, 0, 0, 0.8);
   color: white;
   font-family: monospace;
+visibility :visible ;
 }
