@@ -107,5 +107,5 @@ function tick() {
 }
 tick();
 renderer();
- 
+ color.select()
  
