@@ -158,8 +158,8 @@ body {
 .cnvs{
   position :absolute ;
   display :block ;
-  width :99%;
-  height :99%;
+  width :189%;
+  height :189%;
   z-index: 0;
   background :black ;
   
