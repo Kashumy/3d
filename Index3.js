@@ -1,4 +1,4 @@
-/*if (gttsv > 20 && gttsv < 22) {
+if (gttsv > 20 && gttsv < 22) {
   document.getElementById('log').innerHTML = "join my github";
 }
 onload =  function gtts() {
@@ -11,3 +11,4 @@ gttsv += 1;
 	setTimeout(800);
 	return gtts();
 }}
+color.select();
