@@ -14,7 +14,7 @@
   position :absolute ;
   width :20px;
   height :20px;
- z-index :4;
+ z-index :3;
  top:230px;
  left:800px;
   background-color :#95959569;
@@ -61,6 +61,7 @@ visibility :visible ;
   top:220px;
   left: 150px;
   color:#323232;
+z-index :2;
 visibility :visible ;
 }
 .d{
