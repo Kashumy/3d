@@ -286,10 +286,24 @@ function myFunction(event) {
      z = camera.position.z ;
        
        
-       
-  document.getElementById("console").innerHTML = xt + ", " + yt +" .........Popelek "+ '<br>version  a1.2.01 relase (kliknij ekran jerzeli chcesz muzuke'+ '<br><br>    [X] '+camera.position.x+`[Y] `+camera.position.y+'[Z] ' + camera.position.z +'<br>Copyright© 2023 readme.md' +'<br><br><a   href="https://github.com/Kashumy" >[github] </a> - github krystiana';
+
+
+       //. +----------------+
+       //. |.version name   |
+       //. |.    console    |
+       //. +----------------+
+
+  document.getElementById("console").innerHTML = xt + ", " + yt +" .........Popelek "+ '<br>version  a1.2.p02 relase (kliknij ekran jerzeli chcesz muzuke'+ '<br><br>    [X] '+camera.position.x+`[Y] `+camera.position.y+'[Z] ' + camera.position.z +'<br>Copyright© 2023 readme.md' +'<br><br><a   href="https://github.com/Kashumy" >[github] </a> - github krystiana';
   
+
+
+
+// end version name
 }
+       //. +----------------+
+       //. |.touch speed    |
+       //. |.    Touch      |
+       //. +----------------+
 
 function go(event) {
   
@@ -327,6 +341,8 @@ if  ((event) = false) {
 if (camera.position.y < -9) {
   camera.position.y += 20;
 }
+
+//touch event
 
 window.addEventListener('touchstart', function onFirstTouch() {
   // we could use a class
