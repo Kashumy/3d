@@ -42,17 +42,17 @@
       const loader = new THREE.CubeTextureLoader();
       const texture = loader.load([
         //right
-        './textures/Daylight Box_Right.bmp',
+        './Daylight Box_Right.bmp',
         //left
-        './textures/Daylight Box_Left.bmp',
+        './Daylight Box_Left.bmp',
         //top
-'./textures/Daylight Box_Top.bmp',
+'./Daylight Box_Top.bmp',
 //bottom 
-'./textures/Daylight Box_Bottom.bmp',
+'./Daylight Box_Bottom.bmp',
 //font
-'./textures/Daylight Box_Front.bmp',
+'./Daylight Box_Front.bmp',
 //back
-'./textures/Daylight Box_Back.bmp ',
+'./Daylight Box_Back.bmp ',
 
 
 
@@ -78,14 +78,14 @@
     const loader = new THREE.TextureLoader();
         const loader2 = new THREE.TextureLoader();
         
-    var floortexture = loader.load('/textures/pixil-frame-0.png', function(texture) {
+    var floortexture = loader.load('./pixil-frame-0.png', function(texture) {
     
       texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
       texture.offset.set(0, 0);
       texture.repeat.set(20, 20);
 
     });
-var leavestexture = loader.load('/textures/leaves.png', function(texture2) {
+var leavestexture = loader.load('./leaves.png', function(texture2) {
 
   texture2.wrapS = texture2.wrapT = THREE.RepeatWrapping;
   texture2.offset.set(0, 0);
