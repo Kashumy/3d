@@ -25,20 +25,15 @@
       var camera = new THREE.PerspectiveCamera( 100,window.innerWidth / window.innerHeight, 0.1, 1000 , 1000);
       camera.position.set(0, 0, 
       3);
-      camera.position.set(0, 0, 10);
-      camera.up.set(0, -1, 0);
+      
       
 
-      // Set Renderer
-     // var renderer = new THREE.WebGLRenderer();
-   //   renderer.setSize(window.innerWidth, window.innerHeight);
- //     document.body.appendChild(renderer.domElement);
- 
+      
      var renderer = new THREE.WebGLRenderer();
      renderer.setSize(window.innerWidth, window.innerHeight);
      document.body.appendChild(renderer.domElement);
     
-    {
+    
       const loader = new THREE.CubeTextureLoader();
       const texture = loader.load([
         //right
@@ -328,7 +323,7 @@ controls.addEventListener('unlock', function() {
 /*player.add(camera);
 player.add(facing);
 */
-
+scene.add(camera);
       // Show the scene
       renderer.render(scene, camera);
       var render = function() {
