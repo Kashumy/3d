@@ -6,6 +6,7 @@
   
   		<canvas onload="text2()"  ontouchmove="myFunction(event)" id="canvas"   class="a ssd canvas"  ></canvas>
   		<canvas id="m"class="menu"></canvas>
+              <canvas class="cnvs" id="c"></canvas>
   		<title>3D block Krystiana obruć urządzenie</title>
 
     <style>
@@ -121,6 +122,15 @@ body {
   position :absolute ;
   top: 400px;
   left: 490px;
+}
+.cnvs{
+  position :absolute ;
+  display :block ;
+  width :99%;
+  height :99%;
+  z-index: 0;
+  background :black ;
+  
 }
 html{margin:0; height: 100%;overflow: hidden;} 
     </style>
