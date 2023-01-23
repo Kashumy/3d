@@ -11,59 +11,90 @@
       ab=1;
       
       
-      lightintensity =(  3 ) ;
+      lightintensity =(  2 ) ;
       
 
-      
+
+
+
       
       // Set Scene
       var scene = new THREE.Scene();
       scene.background = new THREE.Color('#0F1E27'); // black background
       // Set Camera
-      const camera = new THREE.PerspectiveCamera(100,window.innerWidth / window.innerHeight, 0.1, 1000 , 1000);
+      var camera = new THREE.PerspectiveCamera( 100,window.innerWidth / window.innerHeight, 0.1, 1000 , 1000);
       camera.position.set(0, 0, 
       3);
+      camera.position.set(0, 0, 10);
+      camera.up.set(0, -1, 0);
+      
 
       // Set Renderer
      // var renderer = new THREE.WebGLRenderer();
    //   renderer.setSize(window.innerWidth, window.innerHeight);
  //     document.body.appendChild(renderer.domElement);
-    const canvas = document.getElementById('c');
-    const renderer = new THREE.WebGLRenderer({ canvas });
+ 
+     var renderer = new THREE.WebGLRenderer();
+     renderer.setSize(window.innerWidth, window.innerHeight);
+     document.body.appendChild(renderer.domElement);
+ 
+
     
-    function resizeRendererToDisplaySize(renderer) {
-      const canvas = renderer.domElement;
-      const width = canvas.clientWidth;
-      const height = canvas.clientHeight;
-      const needResize = canvas.width != width || canvas.height !== height;
-      if (needResize) {
-        renderer.setSize(width, height, false);
-      }
-      return needResize;
-    }
-     if (resizeRendererToDisplaySize(renderer)) {
-       const canvas = renderer.domElement;
-       camera.aspect = canvas.clientWidth / canvas.clientHeight ;
-       camera.updateProjectionMatrix();
-     }
-    
-    
-    
+     
     {
       const loader = new THREE.CubeTextureLoader();
       const texture = loader.load([
-        './Map.png',
-        './Map.png',
-'./Map.png',
-'./Map.png',
-'./Map.png',
-'./Map.png',
+        //right
+        './Daylight Box_Right.bmp',
+        //left
+        './Daylight Box_Left.bmp',
+        //top
+'./Daylight Box_Top.bmp',
+//bottom 
+'./Daylight Box_Bottom.bmp',
+//font
+'./Daylight Box_Front.bmp',
+//back
+'./Daylight Box_Back.bmp ',
 
 
 
       ]);
+      
       scene.background = texture;
     }
+    const player = new THREE.Mesh(coin,gold);
+    player.position.z -= 3;
+    scene.add(player)
+    const facing = new THREE.Object3D();
+    facing.position.z += 6;
+    scene.add(facing);
+    
+    /*var v = new THREE.Vector3 (0,0,1
+    );
+          v.x = 0;
+                v.y = 0
+                v.z = 2
+    camera.lookAt(v);
+    camera.add(v);*/
+    
+    const loader = new THREE.TextureLoader();
+        const loader2 = new THREE.TextureLoader();
+        
+    var floortexture = loader.load('./pixil-frame-0.png', function(texture) {
+    
+      texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
+      texture.offset.set(0, 0);
+      texture.repeat.set(20, 20);
+
+    });
+var leavestexture = loader.load('./leaves.png', function(texture2) {
+
+  texture2.wrapS = texture2.wrapT = THREE.RepeatWrapping;
+  texture2.offset.set(0, 0);
+  texture2.repeat.set(6, 6);
+
+});
    var background = scene.background ;
       
       
@@ -72,21 +103,39 @@
       
  // kolory
 var material2 = new THREE.MeshPhongMaterial({
-   color: 'black'
- });
-
- var material3 = new THREE.MeshStandardMaterial({
-   color: '#0E0500'
+  
+   color: 0xfffff,
+     specular: 0xffffff,
+     shininess: 10,
+map: loader.load('/textures/pixil-frame-0 (3).png'),
+     reflectivity: 0.1
+   
  });
  
+ const size = 500;
+const divisions = 60;
+
+/*const gridHelper = new THREE.GridHelper( size, divisions );
+scene.add( gridHelper );
+gridHelper.position.y -= 5;
+
+ var material3 = new THREE.MeshStandardMaterial({
+   color: '#0E0500', 
+   
+ });
+ */
  
  
       var material = new THREE.MeshStandardMaterial({
-          color: '#234700', 
+        shininess: 7,
+        antialias:true, 
+        map: floortexture, 
+        
+          /*color: '#234700', 
          flatShading:true, 
          metalness : 0.2 ,
          roughness:0.15, 
-         envMap:0.076, 
+         envMap:0.076, */
       });
       
       
@@ -95,16 +144,17 @@ var material2 = new THREE.MeshPhongMaterial({
         color: '#211300'
       });
       var leavematerial = new THREE.MeshStandardMaterial({
-        color: '#111800', 
+        map: leavestexture,
+          transparent: true,
         metalness : 0.5 ,
         fog :true, 
         transparent: true,
-          opacity: 0.9
-        
+          
+        reflectivity: 0.1, 
       });
 var gold = new THREE.MeshPhongMaterial({
   
-        
+        reflectivity: 98, 
         color: 0x00010BBF,
         transparent:  true, 
         opacity: 0.6
@@ -123,7 +173,7 @@ var snu = new THREE.MeshNormalMaterial({
             
       var floor = new THREE.BoxGeometry(100,10,100);
       var m1 = new THREE.BoxGeometry(100,50,100);
-      var floormap2 = new THREE.BoxGeometry(100,10,100);
+      var floormap2 = new THREE.BoxGeometry(100,100,100);
       var geometry = new THREE.BoxGeometry(1, 1,1);
       var treelog = new THREE.BoxGeometry(1, 8,1);
       var coin = new THREE.BoxGeometry(2,2,2);
@@ -156,14 +206,24 @@ var most = new THREE.Mesh(brg, treelogmaterial);
 		
 //obtut objektu	
 
-      cube.rotation.x = 22.5;
-      cube.rotation.y = 45;
+     /* cube.rotation.x = 22.5;
+      cube.rotation.y = 45;*/
+      
 //pokaż objekt
 scene.add(obj1);
 scene.add(map3);
 scene.add(most);
 scene.add(ocean);
-      scene.add(cube);
+
+
+
+
+
+     // camera.add(player);
+      
+    //  facing.player.position.z = 8;
+      
+      
       scene.add(sun);
             scene.add(coin1);
 			scene.add(floor);
@@ -181,7 +241,7 @@ scene.add(leaf2);
 			cube2.position.z -= 120
 cube2.position.x -= 50
 			floor.position.y -= 8
-			floormap2.position.y -= 8
+			floormap2.position.y -= 53
 			floormap2.position.z -= 110
 			 tree.position.z -= 10
 			 sun.position.z += 400
@@ -235,38 +295,69 @@ cube2.position.x -= 50
          */
          
      scene.add(directionalLight);
+     /*
+const controls = new PointerLockControls(camera, document.body);
+
+// add event listener to show/hide a UI (e.g. the game's menu)
+
+
+
+/*
+.    +-----------+
+.    |.controls  |
+.    |.          |
+.    +-----------+
+*/
+
+/*
+controls.addEventListener('lock', function() {
+
+  menu.style.display = 'none';
+
+});
+
+controls.addEventListener('unlock', function() {
+
+  menu.style.display = 'block';
+
+});
+
+
+
+
+
+
+
 
 
 
 
 //pętlowanie
-
-
-
+//facing funkcja game engine e0.1
+/*player.add(camera);
+player.add(facing);
+*/
 
       // Show the scene
       renderer.render(scene, camera);
       var render = function() {
+       // camera.lookAt(facing.position.x, facing.position.y ,facing.position.z );
+        player.position.x = camera.position.x;
+        player.position.y = camera.position.y ;
+        player.position.z = camera.position.z ;
+        //facing
+      
+        player.position.x = facing.position.x +2
+       player.position.y = facing.position.y +2
+ player.position.z = facing.position.z +2
 			requestAnimationFrame(render);
+			
+			
 			cube.rotation.x -= 0.005;
 		cube.rotation.y += 0.003;
 		background.rotation.y += 0.0008;
 
-						if (xt > 800) {
-			  camera.rotation.y -= xt / 30000;
-			}
-if (xt < 1000) {
-  camera.rotation.y += xt / 30000;
-}
-
-
-
-			if (yt < 220) {
-			  camera.rotation.x += yt / 8000;
-			}
-if (yt > 320) {
-  camera.rotation.x -= yt / 25000;
-}
+						
 			
 			
 			renderer.render(scene, camera);
@@ -276,14 +367,28 @@ if (yt > 320) {
 
 function myFunction(event) {
   
-     xt = event.touches[0].clientX;
-     yt = event.touches[0].clientY;
-     
+    
+ xt = event.touches[0].clientX; 
+ yt = event.touches[0].clientY;
+ 
      TO=1;
      
-     x = camera.position.x ;
-     y = camera.position.y ;
-     z = camera.position.z ;
+     if (xt > 800) {
+       camera.rotation.y -= xt / 30000;
+     }
+     if (xt < 1000) {
+       camera.rotation.y += xt / 30000;
+     }
+     
+     
+     
+     if (yt < 220) {
+       camera.rotation.x += yt / 8000;
+       
+     }
+     if (yt > 320) {
+       camera.rotation.x -= yt / 25000;
+     }
        
        
        
@@ -294,39 +399,43 @@ function myFunction(event) {
 function go(event) {
   
      camera.position.z -= 0.3;
-  
+player.position.z -= 0.3;
+facing.position.z -= 0.3;
 }
 function back(event) {
   
      camera.position.z += 0.3;
-  
+  player.position.z += 0.3;
+  facing.position.z += 0.3;
 }
 function up(event) {
   camera.position.y  += 0.4 ;
+  player.position.y  += 0.4 ;
+  facing.position.y += 0.4;
 }
 
 function left(event) {
   camera.position.x  += 0.3 ;
+  player.position.x  += 0.3 ;
+  facing.position.x += 0.3;
 }
 
 function right(event) {
   camera.position.x  -= 0.3 ;
+  player.position.x  -= 0.3 ;
+  facing.position.x -= 0.3;
 }
 function down(event) {
   camera.position.y -= 0.4;
+  player.position.y  -= 0.4 ;
+  facing.position.y -= 0.4;
 }
 
 render();
 render();
 
-if  ((event) = false) {
-  xt=0;
-  yt=0;
-  
-}
-if (camera.position.y < -9) {
-  camera.position.y += 20;
-}
+
+
 
 window.addEventListener('touchstart', function onFirstTouch() {
   // we could use a class
@@ -342,6 +451,4 @@ window.addEventListener('touchstart', function onFirstTouch() {
   window.removeEventListener('touchstart', onFirstTouch, true);
 }, false);
  
- const px = camera.position.x ;
- const pz = camera.position.z ;
- const py = camera.position.y ;
+ 

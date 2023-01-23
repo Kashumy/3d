@@ -1,8 +1,3 @@
-let gttsv =0;
-let mam =0;
-let zz=0;
-let xk=0;
-
 document.getElementById('m').style.visibility ="hidden" ;
 document.getElementById('m3').style.visibility ="hidden" ;
 document.getElementById('m4').style.visibility ="hidden" ;
@@ -25,7 +20,13 @@ document.getElementById('daynight').style.visibility ="hidden";
       document.getElementById('daynight').style.visibility ="hidden";
     }
     color.select();
-    
+
+
+let gttsv =0;
+let mam =0;
+let zz=0;
+let xk=0;
+ 
 /*onload =  function gtts() {
 	setTimeout(doSomething2, 800);
 	function doSomething2() {
